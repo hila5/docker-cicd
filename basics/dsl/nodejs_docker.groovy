@@ -13,7 +13,7 @@ job('NodeJS Docker example') {
     steps {
         dockerBuildAndPublish {
             repositoryName('hila5/jenkinslab')
-            tag('${GIT_REVISION,length=9}')
+            tag('nodejs-dsl-docker')
             registryCredentials('hila_dockerhub')
             buildContext('./basics/')
             forcePull(false)
